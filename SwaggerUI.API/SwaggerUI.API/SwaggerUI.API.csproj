@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SwaggerUI.API.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+		<ItemGroup>
+			<DocFile Include="bin\**\**\SwaggerUI.API.xml" />
+		</ItemGroup>
+		<Copy SourceFiles="@(DocFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <None Remove="Assets\custom-ui.css" />
+    <None Remove="EmbaddedAssets\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbaddedAssets\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\SwaggerUIAPI20191007023047 - Web Deploy.pubxml.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0-rc4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationService\ApplicationService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+</Project>

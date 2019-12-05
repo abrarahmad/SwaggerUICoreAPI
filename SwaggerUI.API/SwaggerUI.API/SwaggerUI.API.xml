@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SwaggerUI.API</name>
+    </assembly>
+    <members>
+        <member name="T:SwaggerUI.API.Bootstrap.SwaggerUIAPIBootstrap">
+            <summary>
+            SwaggerUIAPIBootstrap
+            </summary>
+        </member>
+        <member name="M:SwaggerUI.API.Bootstrap.SwaggerUIAPIBootstrap.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment)">
+            <summary>
+            Initialize
+            </summary>
+            <param name="services"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:SwaggerUI.API.Bootstrap.SwaggerUIUnityRegistror">
+            <summary>
+            SwaggerUIUnityRegistror
+            </summary>
+        </member>
+        <member name="M:SwaggerUI.API.Bootstrap.SwaggerUIUnityRegistror.Register(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:SwaggerUI.API.Controllers.CustomerController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.#ctor(ApplicationService.Interfaces.ICustomerService,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="customerService"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.GetAllCustomerAsync">
+            <summary>
+            GetAllCustomerAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.GetCustomerAsync(System.Int32)">
+            <summary>
+            Get Customer informat by his/her id
+            </summary>
+            <param name="id">The id of customer want to get information</param>
+            <returns>An ActionResult of type Customer</returns>
+            <response code="200">Get Customer by customer id</response>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.AddCustomerAsync(SwaggerUI.API.Models.CustomerModel)">
+            <summary>
+            
+            </summary>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.EditCustomerAsync(SwaggerUI.API.Models.CustomerModel)">
+            <summary>
+            
+            </summary>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.CustomerController.DeleteCustomerAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SwaggerUI.API.Controllers.SupplierController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.#ctor(ApplicationService.Interfaces.ISupplierService,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="supplierService"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.GetAllSupplierAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.GetSupplierAsync(System.Int32)">
+            <summary>
+            Get Supplier in format by his/her id
+            </summary>
+            <param name="id">The id of supplier want to get information</param>
+            <returns>An ActionResult of type Supplier</returns>
+            <response code="200">Get Supplier by Supplier id</response>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.AddSupplierAsync(SwaggerUI.API.Models.SupplierModel)">
+            <summary>
+            
+            </summary>
+            <param name="supplier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.EditSupplierAsync(SwaggerUI.API.Models.SupplierModel)">
+            <summary>
+            
+            </summary>
+            <param name="supplier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerUI.API.Controllers.SupplierController.DeleteSupplierAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SwaggerUI.API.Models.CustomerModel">
+            <summary>
+            Customer with Id, FirstName, LastName, City and Phone fields
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.Id">
+            <summary>
+            The id of customer
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.FirstName">
+            <summary>
+            This first name of customer
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.LastName">
+            <summary>
+            This last name of customer
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.City">
+            <summary>
+            This city of customer
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.Country">
+            <summary>
+            This country of customer
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.CustomerModel.Phone">
+            <summary>
+            This phone of customer
+            </summary>
+        </member>
+        <member name="T:SwaggerUI.API.Models.SupplierModel">
+            <summary>
+            Supplier with Id, CompanyName, ContactName, ContactTitle,Country,City and Phone,Fax fields
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.Id">
+            <summary>
+            The id of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.CompanyName">
+            <summary>
+            This first name of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.ContactName">
+            <summary>
+            This last name of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.ContactTitle">
+            <summary>
+            This last name of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.City">
+            <summary>
+            This city of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.Country">
+            <summary>
+            This country of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.Phone">
+            <summary>
+            This phone of supplier
+            </summary>
+        </member>
+        <member name="P:SwaggerUI.API.Models.SupplierModel.Fax">
+            <summary>
+            This fax of supplier
+            </summary>
+        </member>
+    </members>
+</doc>
